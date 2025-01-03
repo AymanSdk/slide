@@ -17,12 +17,13 @@ import { LogoSmall } from "@/svgs/logo-small";
 import CreateAutomation from "../create-automation";
 import Search from "../search";
 import Notifications from "./notifications";
+import MainBreadCrumb from "../Main-bread-crumb";
 
 type Props = {
   slug: string;
 };
 
-const Navbar = ({ slug }: Props) => {
+const Infobar = ({ slug }: Props) => {
   const { page } = usePaths();
   const currentPage = PAGE_BREAD_CRUMBS.includes(page) || page == slug;
   return (
@@ -66,9 +67,10 @@ const Navbar = ({ slug }: Props) => {
           <CreateAutomation />
           <Notifications />
         </div>
+        <MainBreadCrumb page={page === slug ? "Home" : page} slug={slug} />
       </div>
     )
   );
 };
 
-export default Navbar;
+export default Infobar;
