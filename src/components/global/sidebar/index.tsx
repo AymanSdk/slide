@@ -1,12 +1,14 @@
 "use client";
 
-import { usePaths } from "@/hooks/user-nav";
-import { LogoSmall } from "@/svgs/logo-small";
 import React from "react";
 import Items from "./items";
+import ClerkAuthState from "../clerk-auth-state";
+import { usePaths } from "@/hooks/user-nav";
+import { LogoSmall } from "@/svgs/logo-small";
 import { Separator } from "@/components/ui/separator";
 import { HelpDuoToneWhite } from "@/icons";
-import ClerkAuthState from "../clerk-auth-state";
+import { SubscriptionPlan } from "../subscription-plan";
+import UpgradeCard from "./upgrade";
 
 type Props = {
   slug: string;
@@ -37,6 +39,11 @@ const Sidebar = ({ slug }: Props) => {
             <p className="text-[#9B9CA0]">Help</p>
           </div>
         </div>
+        <SubscriptionPlan>
+          <div className="flex-1 flex flex-col justify-end">
+            <UpgradeCard />
+          </div>
+        </SubscriptionPlan>
       </div>
     </div>
   );
