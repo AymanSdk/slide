@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 
 import { Toaster } from "sonner";
@@ -9,7 +9,7 @@ import { dark } from "@clerk/themes";
 
 import { ThemeProvider } from "@/providers/theme-provider";
 
-const inter = Inter({ subsets: ["latin"] });
+const jakarta = Plus_Jakarta_Sans({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Slide",
@@ -29,7 +29,7 @@ export default function RootLayout({
       }}
     >
       <html lang="en">
-        <body suppressHydrationWarning className={inter.className}>
+        <body suppressHydrationWarning className={jakarta.className}>
           <ThemeProvider
             attribute="class"
             defaultTheme="system"
