@@ -45,7 +45,7 @@ const PaymentCard = ({ current, label, landing }: Props) => {
         </p>
         {label === "PRO" ? (
           <span className="bg-gradient-to-r text-3xl from-indigo-500 via-purple-500 font-bold to-pink-500 bg-clip-text text-transparent">
-            Smart AI
+            Slide AI
           </span>
         ) : (
           <p className="font-bold mt-2 text-text-secondary">Standard</p>
