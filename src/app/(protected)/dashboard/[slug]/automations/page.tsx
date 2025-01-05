@@ -1,4 +1,4 @@
-import CreateAutomationButton from "@/components/global/create-automation-button";
+import CreateAutomation from "@/components/global/create-automation";
 import { CheckIcon } from "lucide-react";
 import React from "react";
 
@@ -31,7 +31,7 @@ const Page = (props: Props) => {
               </div>
             ))}
           </div>
-          <CreateAutomationButton />
+          <CreateAutomation />
         </div>
       </div>
     </div>
